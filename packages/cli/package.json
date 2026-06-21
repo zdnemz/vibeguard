@@ -18,6 +18,7 @@
     "build": "tsc --build"
   },
   "dependencies": {
-    "@vibeguard/core": "*"
+    "@vibeguard/core": "*",
+    "@vibeguard/rules": "*"
   }
 }
