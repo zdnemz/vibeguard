@@ -1,0 +1,13 @@
+node_modules
+dist
+.env
+coverage
+*.tsbuildinfo
+
+# Autonomous system files (managed by Hermes orchestrator, NOT part of VibeGuard repo)
+.claude/agents/
+.claude/skills/
+docs/architecture.md
+docs/intent.md
+*.tsbuildinfo
+.DS_Store

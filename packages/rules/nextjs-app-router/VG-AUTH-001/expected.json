@@ -1,0 +1,19 @@
+[
+  {
+    "id": "VG-AUTH-001",
+    "severity": "critical",
+    "file": "middleware.ts",
+    "title": "Route protection may have been weakened.",
+    "evidence": [
+      "matcher changed from \"/dashboard/:path*\" to \"/dashboard\""
+    ],
+    "why": "Nested routes such as /dashboard/settings may no longer be protected.",
+    "review": [
+      "Confirm all nested dashboard routes still require authentication."
+    ],
+    "test": [
+      "Request /dashboard/settings without a session.",
+      "Expected: redirect or 401."
+    ]
+  }
+]

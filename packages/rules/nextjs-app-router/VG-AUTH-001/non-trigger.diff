@@ -1,0 +1,19 @@
+diff --git a/middleware.ts b/middleware.ts
+index a1b2c3d..e4f5g6h 100644
+--- a/middleware.ts
++++ b/middleware.ts
+@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
+ 
+ export const config = {
+   matcher: [
+-    '/dashboard',
++    '/dashboard/:path*',
+     '/settings/:path*',
+     '/admin/:path*',
+   ],
+@@ -15,4 +15,4 @@ export function middleware(request: NextRequest) {
+   return response
+ }
+ 
+-// End of middleware
++// End of middleware file
