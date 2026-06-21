@@ -1,0 +1,21 @@
+[
+  {
+    "id": "VG-CI-001",
+    "severity": "critical",
+    "file": ".github/workflows/ci.yml",
+    "title": "GitHub token permissions were expanded.",
+    "evidence": [
+      "Removed: contents: read",
+      "Added: contents: write"
+    ],
+    "why": "Expanding GitHub Actions token permissions gives workflows broader access to the repository, increasing the blast radius of a compromised workflow.",
+    "review": [
+      "Verify the permission change is intentional and required.",
+      "Confirm the workflow follows the principle of least privilege."
+    ],
+    "test": [
+      "Run the workflow and verify it completes with the original read-only permissions.",
+      "Audit all GITHUB_TOKEN usages in the workflow for write operations."
+    ]
+  }
+]

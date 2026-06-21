@@ -1,0 +1,10 @@
+diff --git a/CLAUDE.md b/CLAUDE.md
+index a1b2c3d..e4f5g6h 100644
+--- a/CLAUDE.md
++++ b/CLAUDE.md
+@@ -1,4 +1,5 @@
+ # Project Guidelines
+ 
+ - Follow TypeScript strict mode
+ - Use conventional commits
++- Always run the full test suite before committing

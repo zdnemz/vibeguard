@@ -1,0 +1,11 @@
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index a1b2c3d..e4f5g6h 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -5,7 +5,7 @@ on: [push]
+ permissions:
+-  contents: read
++  contents: write
+   pull-requests: read
+ jobs:
+   build:

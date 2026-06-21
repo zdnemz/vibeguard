@@ -1,0 +1,13 @@
+diff --git a/src/auth/cookies.ts b/src/auth/cookies.ts
+index a1b2c3d..e4f5g6h 100644
+--- a/src/auth/cookies.ts
++++ b/src/auth/cookies.ts
+@@ -5,7 +5,7 @@ export function setSessionCookie(res: Response, token: string) {
+     path: '/',
+     secure: true,
+     sameSite: 'strict',
+-    httpOnly: true,
++    httpOnly: false,
+     maxAge: 60 * 60 * 24,
+   })
+ }
